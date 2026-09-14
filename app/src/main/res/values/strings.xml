@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">4x4_Puzzle</string>
+
+    <string name="titulo_puzzle">Ocho Puzzle</string>
+
+    <string name="numero_1">1</string>
+    <string name="numero_2">2</string>
+    <string name="numero_3">3</string>
+    <string name="numero_4">4</string>
+    <string name="numero_5">5</string>
+    <string name="numero_6">6</string>
+    <string name="numero_7">7</string>
+    <string name="numero_8">8</string>
+    <string name="numero_9">9</string>
+    <string name="numero_10">10</string>
+    <string name="numero_11">11</string>
+    <string name="numero_12">12</string>
+    <string name="numero_13">13</string>
+    <string name="numero_14">14</string>
+    <string name="numero_15">15</string>
+
+    <string name="casilla_vacia">Casilla vacía</string>
+
+    <string name="mensaje">Mensaje</string>
+
+    <string name="btn_reiniciar">REINICIAR JUEGO</string>
+    <string name="btn_desordenar">DESORDENAR</string>
+    <string name="btn_verificar">VERIFICAR</string>
+</resources>
