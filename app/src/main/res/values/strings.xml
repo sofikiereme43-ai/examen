@@ -26,4 +26,7 @@
     <string name="btn_reiniciar">REINICIAR JUEGO</string>
     <string name="btn_desordenar">DESORDENAR</string>
     <string name="btn_verificar">VERIFICAR</string>
+
+    <string name="ganaste">ga</string>
+    <string name="sigue_intentando">sigue</string>
 </resources>

@@ -56,6 +56,15 @@ class MainActivity : AppCompatActivity() {
                 click(fila, col)
             }
         }
+        BTNRestart.setOnClickListener {
+            reiniciar()
+        }
+        BTNDisorder.setOnClickListener {
+            desordenar()
+        }
+        BTNVerify.setOnClickListener {
+            verificar()
+        }
     }
 
     private fun click(fila: Int, col: Int) {
@@ -85,5 +94,59 @@ class MainActivity : AppCompatActivity() {
                 BTNButtons[index].text = Tablero[fila][col]
             }
         }
+
     }
+    private fun reiniciar(){
+        Tablero=arrayOf(
+            arrayOf("1","2","3","4"),
+            arrayOf("12","13","14","5"),
+            arrayOf("11","","15","6"),
+            arrayOf("10","9","8","7")
+        )
+        actualizarBotones()
+        TXVMessage.text="Juego Reiniciado"
+    //  TXVMessage.setText(R.string.mensaje)
+    }
+    private fun desordenar(){
+        val valores=mutableListOf<String>()
+        for(fila in 0 until filas){
+            for (col in 0 until columnas){
+                valores.add(Tablero[fila][col])
+            }
+        }
+        valores.shuffle()
+        var i=0
+        for (fila in 0 until filas){
+            for(col in 0 until columnas){
+                Tablero[fila][col]=valores[i]
+                i++
+            }
+        }
+        actualizarBotones()
+        TXVMessage.text="Juego desordenado"
+       // TXVMessage.setText(R.string.mensaje)
+    }
+    private fun verificar() {
+        val estadoInicial = arrayOf(
+            arrayOf("1", "2", "3", "4"),
+            arrayOf("12", "13", "14", "5"),
+            arrayOf("11", "", "15", "6"),
+            arrayOf("10", "9", "8", "7")
+        )
+        var enEstadoInicial=true
+        for (fila in 0 until filas){
+            for(col in 0 until columnas){
+                if(Tablero[fila][col]!=estadoInicial[fila][col]){
+                    enEstadoInicial=false
+                    break
+                }
+            }
+        }
+        if (enEstadoInicial){
+            TXVMessage.text= "Juego Ordenado"
+        }else{
+            TXVMessage.text= "Juego desordenado"
+        }
+    }
+
 }
